@@ -1,0 +1,429 @@
+* {
+    box-sizing: border-box; /*behavior of width and height*/
+    margin: 0;
+  }
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+[class*="grid"]{ /*create the template with grid display*/
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    grid-template-rows:
+        min-content min-content auto min-content;
+    grid-template-areas: 
+        "header header"
+        "nav nav"
+        "aside main"
+        "footer footer";
+    height: 1760px;
+}
+
+.grid {width: 100%;} /*for desktop*/
+
+@media only screen and (max-width: 540px) { /*for tablet and desktop*/
+    [class*="grid"] {
+        width: 780px;
+    }
+    [id*="life1"]{
+        width: 480px;
+    }
+    [id*="info1"]{
+        width: 480px;
+    }
+    [id*="plays1"]{
+        width: 480px;
+    }
+    [id*="poems1"]{
+        width: 480px;
+    }
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/*areas*/
+
+header, /*set the areas*/
+nav,
+aside,
+main,
+
+footer { /*footer area*/
+    grid-area: footer;
+    border: 1px solid black; /*set all the areas border and backround color*/
+    background-color: rgb(116, 72, 111);
+}
+
+header { /*header area*/
+    grid-area: header;
+    text-align: center;
+}
+
+aside { /*aside area*/
+    grid-area: aside;
+}
+
+main { /*main area*/
+    grid-area: main;
+}
+
+nav { /*nav area*/
+    grid-area: nav;
+    float: center;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/*messages for texts*/
+
+
+#message { /*message for biography info button*/
+    font-size: 35px;
+    width: 300px;
+    position: absolute; /*don't bind space*/
+    margin-top: 10px; /*leave space from top*/
+}
+
+#message1 { /*message for photos */
+    font-size: 35px; /*size of text*/
+    width: 300px;
+    margin-top: 10px;
+    position: absolute; 
+}
+
+#message2 { /*message for works*/
+    font-size: 26px;
+    width: 300px;
+    position: absolute; 
+    margin-top: 18px;
+}
+
+#message3 { /*message for links*/
+    font-size: 36px;
+    width: 300px;
+    position: absolute; 
+    margin-top: 10px;
+}
+
+#message4 { /*message for managment*/
+    font-size: 26px;
+    margin-top: 30px;
+    /* width: 300px; */
+    position: absolute;
+}
+
+#comedy1 { /*message for comedy works*/
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: center;
+    position: absolute;
+}
+
+#tragedy1 { /*message for tragedy works*/
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: left;
+    position: absolute;
+
+}
+
+#romance1 { /*message for romance works*/
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: left;
+    position: absolute;
+}
+
+#biography1 { /*message for link about William Shakespeare button*/
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: left;
+    position: absolute;
+}
+
+#about_plays1 { /*message for about_plays button*/
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: left;
+    position: absolute;
+}
+
+#romeo_and_juliet1 { /*message for link romeo_and_juliet button*/
+    font-size: 17px;
+    text-align: left;
+    position: absolute;
+}
+
+#info1 { /*message for general information button*/
+    font-size: 18px;
+    margin-left: 5px;
+    position: absolute;
+    margin-right: 10px;
+}
+
+#life1 { /*message for early life*/
+    font-size: 18px;
+    position: absolute;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+#plays1 { /*message for plays*/
+    font-size: 18px;
+    position: absolute;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+#poems1 { /*message for poems*/
+    font-size: 18px;
+    position: absolute;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+#Shakespeare1 { /*message for fotos of shakespeare*/
+    margin-bottom: 30px;
+    position: absolute;
+}
+
+#romeo1 { /*message for fotos of romeo and juliet*/
+    font-size: 18px;
+    margin-bottom: 30px;
+    position: absolute;
+}
+
+#login1 {
+    /*message for login*/
+    font-size: 30px;
+    margin-top: 60px;
+    text-align: left;
+    position: absolute;
+    margin-left: 60px;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/*buttons*/
+
+
+#life { /*button for life*/
+    border: 2px solid #040404;
+    text-align: center;
+    padding: 5px 80px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 25px;
+    border-radius: 20px; /*circle the button*/
+}
+
+#comedy { /*button for comedies*/
+    border: 2px solid #040404;
+    text-align: center;
+    padding: 6px 70px;
+    font-size: 13px;
+    cursor: pointer;
+    margin-left: 13px;
+    border-radius: 20px;
+}
+
+#tragedy {   /*button for tragedies*/
+    border: 2px solid #040404;
+    text-align: center;
+    padding: 5px 71px;
+    font-size: 13px;
+    cursor: pointer;
+    margin-left: 13px;
+    border-radius: 20px;
+}
+
+#romance { /*button for romance*/
+    border: 2px solid #040404;
+    text-align: center;
+    padding: 5px 67px;
+    font-size: 13px;
+    cursor: pointer;
+    margin-left: 13px;
+    border-radius: 20px;
+}
+
+#biography { /*button for biography link*/
+    border: 2px solid #040404;
+    padding: 5px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 17px;
+    border-radius: 20px;
+}
+
+#about_plays { /*button for about_plays link*/
+    border: 2px solid #040404;
+    padding: 5px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 17px;
+    border-radius: 20px;
+}
+
+#romeo_and_juliet { /*button for romeo_and_juliet link*/
+    border: 2px solid #040404;
+    padding: 5px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 17px;
+    border-radius: 20px;
+}
+
+#info { /*button for general information*/
+    border: 2px solid #040404;
+    text-align: center;
+    padding: 5px 53px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 25px;
+    border-radius: 20px;
+}
+
+#plays { /*button for plays*/
+    border: 2px solid #040404;
+    text-align: center;
+    padding: 5px 74px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 25px;
+    border-radius: 20px;
+}
+
+#poems { /*button for poems*/
+    border: 2px solid #040404;
+    text-align: center;
+    padding: 5px 69px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 25px;
+    border-radius: 20px;
+}
+
+#bio { /*button for biography*/
+    border: 2px solid #070707;
+    text-align: center;
+    padding: 3px 30px;
+    font-size: 10px;
+    cursor: pointer;
+    margin-left: 38px;
+    border-radius: 20px;
+}
+
+#foto { /*button for photos*/
+    border: 2px solid #050505;
+    text-align: center;
+    padding: 3px 30px;
+    font-size: 10px;
+    cursor: pointer;
+    margin-left: 38px;
+    border-radius: 20px;
+}
+
+#works { /*button for works*/
+    border: 2px solid #0b0b0b;
+    text-align: center;
+    padding: 3px 30px;
+    font-size: 10px;
+    cursor: pointer;
+    margin-left: 38px;
+    border-radius: 20px;
+}
+
+#links { /*button for links*/
+    border: 2px solid #070707;
+    text-align: center;
+    padding: 3px 30px;
+    font-size: 10px;
+    cursor: pointer;
+    margin-left: 38px;
+    border-radius: 20px;
+}
+
+#managment { /*button for managment*/
+    border: 2px solid #090909;
+    text-align: center;
+    padding: 3px 20px;
+    font-size: 10px;
+    cursor: pointer;
+    margin-left: 38px;
+    margin-right: 38px;
+    border-radius: 20px;
+}
+
+#login { /*button for login*/
+    border: 2px solid #040404;
+    text-align: center;
+    padding: 6px 75px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 25px;
+    border-radius: 20px;
+}
+
+#Shakespeare{  /*button for photos of shakespeare*/
+    border: 2px solid #040404;
+    text-align: center;
+    padding: 7px 35px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 50px;
+    background-color:#f6f5f6;
+    border-radius: 20px;
+}
+
+#romeo{  /*button for photos of theater*/
+    border: 2px solid #040404;
+    text-align: center;
+    padding: 7px 53px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 50px;
+    background-color:#f5eff5;
+    border-radius: 20px;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/*classes:*/
+
+.hide { /*hide the previous text */
+    visibility: hidden;
+}
+
+.flex_box { /*use flex box for images*/
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.flex_box img{ /*appearance of images in flex box*/
+    align-items: center;
+    max-width: 50%;
+    margin-top: 30px;
+}
+
+.img1{ /*class for the first column of flex box*/
+    width: 50%;
+    text-align: center;
+    color: white;
+}
+
+.img2{ /*second column*/
+    width: 50%;
+    height: 100vh;
+    text-align: center;
+}
+
+table{ /*table for works and links*/
+	margin: 3px auto;
+    text-align: center;
+    height: 400px;
+    width:  500px;
+}
+
+.float { /*class for float display*/
+    float: auto;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+    background-color: rgb(116, 72, 111);
+}
